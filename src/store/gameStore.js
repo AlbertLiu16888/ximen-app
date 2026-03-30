@@ -48,6 +48,10 @@ export function useGameStore() {
     [state.completedMissions]
   );
 
+  const setLastResult = useCallback((result) => {
+    setState((s) => ({ ...s, lastGameResult: result }));
+  }, []);
+
   return {
     ...state,
     setPlayerName,
@@ -55,5 +59,6 @@ export function useGameStore() {
     completeMission,
     isMissionCompleted,
     getMissionResult,
+    setLastResult,
   };
 }

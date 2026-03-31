@@ -1,19 +1,25 @@
 import { useState } from 'react';
 import TypewriterText from '../components/TypewriterText';
+import { validatePassword } from '../utils/passwordGuard';
 
 export default function DialogView({ mission, onStartGame, onBack }) {
   const [password, setPassword] = useState('');
   const [dialogDone, setDialogDone] = useState(false);
   const [error, setError] = useState('');
   const [unlocked, setUnlocked] = useState(false);
+  const [checking, setChecking] = useState(false);
 
-  const handleSubmit = () => {
-    if (password.trim() === mission.password) {
+  const handleSubmit = async () => {
+    if (checking || !password.trim()) return;
+    setChecking(true);
+    const ok = await validatePassword(mission.id, password);
+    if (ok) {
       setUnlocked(true);
       setError('');
     } else {
       setError('密語錯誤，請再試一次！');
     }
+    setChecking(false);
   };
 
   return (
@@ -70,9 +76,10 @@ export default function DialogView({ mission, onStartGame, onBack }) {
                 />
                 <button
                   onClick={handleSubmit}
-                  className="bg-gold text-ink font-serif font-bold text-sm px-4 py-2 rounded-lg hover:bg-gold-light active:scale-95 transition-all"
+                  disabled={checking}
+                  className="bg-gold text-ink font-serif font-bold text-sm px-4 py-2 rounded-lg hover:bg-gold-light active:scale-95 transition-all disabled:opacity-60"
                 >
-                  確認
+                  {checking ? '驗證中...' : '確認'}
                 </button>
               </div>
               {error && <p className="text-red-light font-serif text-xs mt-2">{error}</p>}

@@ -6,7 +6,6 @@ export const missions = [
     bg: '/mission-01.png',
     gameBg: '/mission-01-1.png',
     resultBg: '/mission-01-2.png',
-    password: '1120',
     passwordHint: '請輸入通關密語以協助千金',
     dialog:
       '哎呀，您來得正好！我是王家千金。我正在尋找一只「消失的翡翠手鐲」，這可是我們家代代相傳、最重要的傳家寶物。聽說它可能還留在這座宅院裡的某個角落……您能協助我在這裡仔細找找嗎？若您能將它完好復原，我一定會給您豐厚的獎賞！',
@@ -28,7 +27,7 @@ export const missions = [
     bg: '/mission-02.png',
     gameBg: '/mission-02-1.png',
     resultBg: '/mission-02-2.png',
-    password: '1120',
+
     passwordHint: '請輸入通關密語開始泡茶',
     dialog:
       '呵呵，年輕人，歡迎來到李氏茶行。今日難得有懂茶之人上門，老夫特地款待一壺上等好茶。泡出一壺好茶的關鍵在於「流程」與「火候」。希望你能靜下心來，沖泡出掌握重要步驟與秒數精髓的好茶。若能讓老夫品到滿意的茶湯，定有好禮相贈！',
@@ -50,7 +49,7 @@ export const missions = [
     bg: '/mission-03.png',
     gameBg: '/mission-03-1.png',
     resultBg: '/mission-03-2.png',
-    password: '1120',
+
     passwordHint: '請輸入通關密語協助廟公',
     dialog:
       '年輕人，走路輕點。這萬應祠裡有許多不可言說的規矩。昨天晚上有一隻野貓亂竄，把神龕上的供品都弄亂了！你能幫我依照神龕上對應的位置，把供品都擺回原位嗎？若能夠完成，信眾們一定會非常感激你的！',
@@ -72,7 +71,7 @@ export const missions = [
     bg: '/mission-04.png',
     gameBg: '/mission-04-1.png',
     resultBg: '/mission-04-2.png',
-    password: '1120',
+
     passwordHint: '請輸入通關密語協助署長破案',
     dialog:
       '你來得正好！本署正在調查一起舞會失竊案——王家千金在昨晚舞會上遺失了一只珍貴的手鐲。目前有四位參加舞會的嫌疑人，他們對昨晚的流程、出入時間、對談紀錄和穿著打扮的說法各不相同。請你仔細分析每個人的證詞，找出矛盾之處，揪出最有嫌疑的人！若能破案，西門町的百姓一定會讚賞你的機智過人！',
@@ -94,7 +93,7 @@ export const missions = [
     bg: '/mission-05.png',
     gameBg: '/mission-05-1.png',
     resultBg: '/mission-05-2.png',
-    password: '1120',
+
     passwordHint: '請輸入通關密語進入紅樓',
     dialog:
       '歡迎歡迎！今晚紅樓有一場特別的電影放映會，我特地邀請您來當貴賓。這部戲可是近年最火紅的作品！看完之後，我想考考您對傳統戲院文化的了解——從放映流程到戲院規矩，都是老西門人的珍貴記憶。若您能通過考驗，下次一定要請您以貴賓身分出席首映禮！',
@@ -116,7 +115,7 @@ export const missions = [
     bg: '/mission-06.png',
     gameBg: '/mission-06-1.png',
     resultBg: '/mission-06-2.png',
-    password: '1120',
+
     passwordHint: '請輸入通關密語開始做麵線',
     dialog:
       '來來來，歡迎光臨！我們家的麵線可是傳承百年的好味道。今天特別讓你親手體驗製作過程——從小麥料理成麵粉、拉製成麵線，再加入熬煮的高湯、肉羹、蝦仁等佐料，每一步都馬虎不得。若你能親手完成一碗正宗的阿宗麵線，我一定會非常開心！',
@@ -138,7 +137,7 @@ export const missions = [
     bg: '/mission-07.png',
     gameBg: '/mission-07-1.png',
     resultBg: '/mission-07-2.png',
-    password: '1120',
+
     passwordHint: '請輸入通關密語協助掌櫃',
     dialog:
       '哎呀不好了！店裡的小二竟然把所有的香辛料都弄混在一起了，這可是製作糕點最重要的靈魂啊！我需要你幫忙把食材分類——酸、甜、苦、辣四種味道，每種味道都有好幾種對應的食材。請你靠著對台灣在地好食材的了解，把它們一一分類歸位。若能夠完成，我一定會非常開心！',
@@ -160,7 +159,7 @@ export const missions = [
     bg: '/mission-08.png',
     gameBg: '/mission-08-1.png',
     resultBg: '/mission-08-2.png',
-    password: '1120',
+
     passwordHint: '請輸入通關密語參與競拍',
     dialog:
       '今天是一年一度的古玩拍賣大會！我有一筆資金授權給你，去和其他店家競標。場上會有許多珍品輪番上陣，但你的預算有限。務必精打細算，在眾多寶物中拍下我指定的兩樣絕世珍品！出價太高會浪費資金，出價太低又會被別人搶走。讓我們滿載而歸吧！',
@@ -182,7 +181,7 @@ export const missions = [
     bg: '/mission-09.png',
     gameBg: '/mission-09-1.png',
     resultBg: '/mission-09-2.png',
-    password: '1120',
+
     passwordHint: '請輸入通關密語破解電碼',
     dialog:
       '嘿，你來得正好！報社正在徵集西門町的珍貴影像，準備製作一期特別專刊。我需要你化身為攝影記者，用相機捕捉西門町最具代表性的一幕！拍好的照片將刊登在明日的頭版頭條，讓全台灣的讀者都能看見西門町的風華！',
@@ -204,7 +203,7 @@ export const missions = [
     bg: '/mission-10.png',
     gameBg: '/mission-10-1.png',
     resultBg: '/mission-10-2.png',
-    password: '1120',
+
     passwordHint: '請輸入通關密語協助名伶',
     dialog:
       '哎呀，糟糕了！今天的彩妝師突然生病了，馬上就要開演了！我需要你了解歌仔戲各個角色臉部的妝容特徵，幫我找出每個角色對應的正確化妝技法。生旦淨丑，每個行當的妝容都大不相同。若你能即時完成化妝，台下的觀眾一定會非常開心！',

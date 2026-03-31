@@ -6,7 +6,7 @@ import QuizGame from '../games/QuizGame';
 import CookingGame from '../games/CookingGame';
 import SortingGame from '../games/SortingGame';
 import AuctionGame from '../games/AuctionGame';
-import CipherGame from '../games/CipherGame';
+import CameraGame from '../games/CameraGame';
 import MatchingGame from '../games/MatchingGame';
 
 const gameComponents = {
@@ -18,7 +18,7 @@ const gameComponents = {
   cooking: CookingGame,
   sorting: SortingGame,
   auction: AuctionGame,
-  cipher: CipherGame,
+  camera: CameraGame,
   matching: MatchingGame,
 };
 

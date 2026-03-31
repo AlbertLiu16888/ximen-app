@@ -19,7 +19,7 @@ export const missions = [
     gameType: 'puzzle',
     timeLimit: 60,
     bgmStyle: '華麗輕快節奏',
-    mapPosition: { top: 18, left: 32 },
+    mapPosition: { top: 22, left: 25 },  // 王家大宅 - 成都路上方
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ export const missions = [
     gameType: 'tea',
     timeLimit: 90,
     bgmStyle: '靜謐穩重',
-    mapPosition: { top: 26, left: 48 },
+    mapPosition: { top: 30, left: 55 },  // 李氏茶行 - 萬年商業大樓附近
   },
   {
     id: 3,
@@ -63,7 +63,7 @@ export const missions = [
     gameType: 'shrine',
     timeLimit: 60,
     bgmStyle: '混亂快板',
-    mapPosition: { top: 28, left: 62 },
+    mapPosition: { top: 15, left: 50 },  // 萬應祠 - 中山堂附近
   },
   {
     id: 4,
@@ -85,7 +85,7 @@ export const missions = [
     gameType: 'detective',
     timeLimit: 120,
     bgmStyle: '懸疑',
-    mapPosition: { top: 22, left: 75 },
+    mapPosition: { top: 45, left: 72 },  // 警察署 - 西門徒步區右側
   },
   {
     id: 5,
@@ -107,7 +107,7 @@ export const missions = [
     gameType: 'quiz',
     timeLimit: 90,
     bgmStyle: '夜上海',
-    mapPosition: { top: 38, left: 72 },
+    mapPosition: { top: 44, left: 30 },  // 紅樓 - 地圖中央偏左
   },
   {
     id: 6,
@@ -129,7 +129,7 @@ export const missions = [
     gameType: 'cooking',
     timeLimit: 75,
     bgmStyle: '撥動算盤的彈跳',
-    mapPosition: { top: 48, left: 28 },
+    mapPosition: { top: 76, left: 28 },  // 阿宗麵線 - 左下方
   },
   {
     id: 7,
@@ -151,7 +151,7 @@ export const missions = [
     gameType: 'sorting',
     timeLimit: 60,
     bgmStyle: '輕快愉悅',
-    mapPosition: { top: 45, left: 52 },
+    mapPosition: { top: 50, left: 48 },  // 老天祿 - 地圖中央
   },
   {
     id: 8,
@@ -173,7 +173,7 @@ export const missions = [
     gameType: 'auction',
     timeLimit: 120,
     bgmStyle: '神秘華麗',
-    mapPosition: { top: 50, left: 62 },
+    mapPosition: { top: 32, left: 38 },  // 古董商 - 漢中街附近
   },
   {
     id: 9,
@@ -195,7 +195,7 @@ export const missions = [
     gameType: 'cipher',
     timeLimit: 90,
     bgmStyle: '播報、打字機',
-    mapPosition: { top: 62, left: 30 },
+    mapPosition: { top: 62, left: 58 },  // 報社 - 真善美劇院附近
   },
   {
     id: 10,
@@ -217,7 +217,7 @@ export const missions = [
     gameType: 'matching',
     timeLimit: 75,
     bgmStyle: '歌仔戲',
-    mapPosition: { top: 72, left: 45 },
+    mapPosition: { top: 68, left: 32 },  // 歌仔戲名伶 - 誠品西門附近
   },
 ];
 

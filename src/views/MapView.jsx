@@ -129,20 +129,42 @@ export default function MapView({ playerName, currentScore, completedMissions, o
         </div>
       )}
 
-      {/* Map hotspots */}
+      {/* Map hotspots — flag pins */}
       {missions.map((mission) => {
         const done = isCompleted(mission.id);
         return (
           <button key={mission.id} onClick={() => handleSelectMission(mission.id)}
             className="absolute z-10 group"
-            style={{ top: `${mission.mapPosition.top}%`, left: `${mission.mapPosition.left}%`, transform: 'translate(-50%, -50%)' }}>
-            <div className={`w-11 h-11 rounded-full flex items-center justify-center transition-all
-              ${done ? 'bg-jade/80 border-2 border-jade shadow-lg shadow-jade/30'
-                : 'bg-gold/30 border-2 border-gold glow-hotspot cursor-pointer hover:scale-110'}`}>
-              {done ? <span className="text-white text-lg">✓</span>
-                : <span className="text-gold font-serif font-bold text-sm">{mission.id}</span>}
+            style={{ top: `${mission.mapPosition.top}%`, left: `${mission.mapPosition.left}%`, transform: 'translate(-50%, -100%)' }}>
+            {/* Flag pin */}
+            <div className="flex flex-col items-center cursor-pointer hover:scale-110 transition-transform">
+              {/* Flag */}
+              <div className="relative">
+                <svg width="28" height="32" viewBox="0 0 28 32" className="drop-shadow-lg">
+                  {/* Pole */}
+                  <line x1="4" y1="6" x2="4" y2="32" stroke={done ? '#1a5c38' : '#7a1a1a'} strokeWidth="2.5" strokeLinecap="round" />
+                  {/* Flag body */}
+                  <path d={`M 4 4 L 24 4 C 22 8, 22 12, 24 16 L 4 16 Z`}
+                    fill={done ? '#2d8b56' : '#c0392b'}
+                    stroke={done ? '#1a5c38' : '#7a1a1a'}
+                    strokeWidth="1"
+                  />
+                  {/* Flag text */}
+                  <text x="14" y="12.5" textAnchor="middle" fontSize="8" fontWeight="bold"
+                    fill="white" fontFamily="serif">
+                    {done ? '✓' : mission.id}
+                  </text>
+                  {/* Pin dot at bottom */}
+                  <circle cx="4" cy="31" r="2" fill={done ? '#2d8b56' : '#c0392b'} />
+                </svg>
+                {/* Bounce animation for incomplete missions */}
+                {!done && (
+                  <div className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-red-light animate-ping opacity-60" />
+                )}
+              </div>
             </div>
-            <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity bg-ink/90 text-parchment text-xs font-serif px-2 py-1 rounded border border-gold/30">
+            {/* Hover label */}
+            <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity bg-ink/90 text-parchment text-xs font-serif px-2 py-1 rounded border border-gold/30 shadow-lg">
               {mission.name}
               {done && (() => { const r = getResult(mission.id); return r ? ` ${'★'.repeat(r.stars)}` : ''; })()}
             </div>

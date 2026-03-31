@@ -20,10 +20,12 @@ export default function ResultView({ mission, stars, score, onBackToMap, onRetry
   const [show, setShow] = useState(false);
   const isFail = stars === 0;
 
+  // On success: let the player see the result image for 3 seconds before showing the message
   useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 300);
+    const delay = isFail ? 300 : 3000;
+    const timer = setTimeout(() => setShow(true), delay);
     return () => clearTimeout(timer);
-  }, []);
+  }, [isFail]);
 
   return (
     <div className="relative w-full h-full overflow-hidden">
@@ -32,7 +34,14 @@ export default function ResultView({ mission, stars, score, onBackToMap, onRetry
         alt={mission.name}
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+      <div
+        className="absolute inset-0 transition-all duration-1000"
+        style={{
+          background: show
+            ? 'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4), rgba(0,0,0,0.2))'
+            : 'linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.1), rgba(0,0,0,0.05))',
+        }}
+      />
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-6">
         <div
